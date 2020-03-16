@@ -1,14 +1,14 @@
 # RestDemo2
 RestDemo2 is the second version of RestDemo.  RestDemo manages "snippets" ( code snippets ).  The table snippets resides in the restdemo schema.  Snippet attributes are:
 
-id
-created
-title
-code
-linenos
-language
-style
-highlighted
+id, 
+created, 
+title, 
+code, 
+linenos, 
+language, 
+style, 
+highlighted, 
 owner_id
 
 
@@ -17,17 +17,19 @@ RestDemo has one restful resource "Snippet". Snippets can be created, updated, d
 
 Steps to build the project:
 
-Install postgres 12.1
-Install nginx 16.1
+1. Install postgres 12.1
+2. Install nginx 16.1
 
 Instructions for installing and configuring postgres, nginx, supervisor, gunicorn are located in the project folders
 
-Install python 3.6.3
-Install all dependent libraries with pip install. All libraries are listed in requirements.txt exept for Supervisor, which is installed system wide with yum install.
+3. Install python 3.6.3
+4. Install all dependent libraries with pip install. All libraries are listed in requirements.txt except for Supervisor, which is installed system wide with yum install.
 
-Supervisor is a graphical tool that allows to start/stop/refresh/view logs using a graphical interface instead of command line.
+Supervisor is a graphical tool that allows to start/stop/refresh the RestDemo application and to view logs using a graphical interface instead of command line.
 
-Run the sql statements to configure postgres ( Create roles, users, privilegies, schema ) in setuprestdemo.sql, included in the project folder.
-run the command: python manage.py migrate to build the database.
-run the command: python manage.py runserver 6.To run the unit tests run the command python manage.py test --keepdb
-To run the BDD test run the command python manage.py behave --keepdb
+5. Run the sql statements to configure postgres ( Create roles, users, privilegies, schema ) in setuprestdemo.sql, included in the project folder.
+
+6. run the command: python manage.py migrate to build the database.
+7. run the command: python manage.py runserver 
+8. To run the unit tests run the command python manage.py test --keepdb
+9. To run the BDD test run the command python manage.py behave --keepdb
