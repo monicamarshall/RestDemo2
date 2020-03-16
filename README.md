@@ -17,8 +17,8 @@ RestDemo has one restful resource "Snippet". Snippets can be created, updated, d
 
 Steps to build the project:
 
-1. Install postgres 12.1
-2. Install nginx 16.1
+1. Install postgres 12.2
+2. Install nginx 1.16
 
 Instructions for installing and configuring postgres, nginx, supervisor, gunicorn are located in the project folders
 
