@@ -33,3 +33,4 @@ Supervisor is a graphical tool that allows to start/stop/refresh the RestDemo ap
 7. run the command: python manage.py runserver 
 8. To run the unit tests run the command python manage.py test --keepdb
 9. To run the BDD test run the command python manage.py behave --keepdb
+10. To run SoapUI snippets test scenario, install latest version of SoapUI, import the project, run the test steps.
