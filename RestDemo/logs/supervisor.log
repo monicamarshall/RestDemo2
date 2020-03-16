@@ -1,0 +1,74 @@
+[2020-03-13 00:40:44 -0600] [6178] [INFO] Starting gunicorn 20.0.4
+[2020-03-13 00:40:44 -0600] [6178] [INFO] Listening at: http://127.0.0.1:8002 (6178)
+[2020-03-13 00:40:44 -0600] [6178] [INFO] Using worker: sync
+[2020-03-13 00:40:44 -0600] [6187] [INFO] Booting worker with pid: 6187
+[2020-03-13 00:49:08 -0600] [6178] [INFO] Handling signal: term
+[2020-03-13 06:49:08 +0000] [6187] [INFO] Worker exiting (pid: 6187)
+[2020-03-13 00:49:08 -0600] [6178] [INFO] Shutting down: Master
+python: can't open file 'file.py': [Errno 2] No such file or directory
+python: can't open file 'file.py': [Errno 2] No such file or directory
+python: can't open file 'file.py': [Errno 2] No such file or directory
+python: can't open file 'file.py': [Errno 2] No such file or directory
+[2020-03-13 00:50:11 -0600] [6692] [INFO] Starting gunicorn 20.0.4
+[2020-03-13 00:50:11 -0600] [6692] [INFO] Listening at: http://127.0.0.1:8002 (6692)
+[2020-03-13 00:50:11 -0600] [6692] [INFO] Using worker: sync
+[2020-03-13 00:50:11 -0600] [6701] [INFO] Booting worker with pid: 6701
+[2020-03-13 01:47:59 -0600] [6692] [CRITICAL] WORKER TIMEOUT (pid:6701)
+[2020-03-13 07:47:59 +0000] [6701] [INFO] Worker exiting (pid: 6701)
+[2020-03-13 01:47:59 -0600] [8436] [INFO] Booting worker with pid: 8436
+[2020-03-13 01:52:59 -0600] [6692] [CRITICAL] WORKER TIMEOUT (pid:8436)
+[2020-03-13 07:52:59 +0000] [8436] [INFO] Worker exiting (pid: 8436)
+[2020-03-13 01:52:59 -0600] [8460] [INFO] Booting worker with pid: 8460
+[2020-03-13 01:57:59 -0600] [6692] [CRITICAL] WORKER TIMEOUT (pid:8460)
+[2020-03-13 07:57:59 +0000] [8460] [INFO] Worker exiting (pid: 8460)
+[2020-03-13 01:57:59 -0600] [8496] [INFO] Booting worker with pid: 8496
+[2020-03-13 02:14:15 -0600] [6692] [CRITICAL] WORKER TIMEOUT (pid:8496)
+[2020-03-13 08:14:15 +0000] [8496] [INFO] Worker exiting (pid: 8496)
+[2020-03-13 02:14:16 -0600] [8536] [INFO] Booting worker with pid: 8536
+[2020-03-13 05:19:20 -0600] [6692] [CRITICAL] WORKER TIMEOUT (pid:8536)
+[2020-03-13 11:19:21 +0000] [8536] [INFO] Worker exiting (pid: 8536)
+[2020-03-13 06:14:15 -0600] [8589] [INFO] Booting worker with pid: 8589
+[2020-03-13 08:14:42 -0600] [6692] [CRITICAL] WORKER TIMEOUT (pid:8589)
+[2020-03-13 14:14:42 +0000] [8589] [INFO] Worker exiting (pid: 8589)
+[2020-03-13 08:14:43 -0600] [8686] [INFO] Booting worker with pid: 8686
+[2020-03-14 10:12:55 -0600] [993] [INFO] Starting gunicorn 20.0.4
+[2020-03-14 10:12:55 -0600] [993] [INFO] Listening at: http://127.0.0.1:8002 (993)
+[2020-03-14 10:12:55 -0600] [993] [INFO] Using worker: sync
+[2020-03-14 10:12:55 -0600] [1064] [INFO] Booting worker with pid: 1064
+Not Found: /favicon.ico
+[2020-03-14 11:16:55 -0600] [1001] [INFO] Starting gunicorn 20.0.4
+[2020-03-14 11:16:55 -0600] [1001] [INFO] Listening at: http://127.0.0.1:8002 (1001)
+[2020-03-14 11:16:55 -0600] [1001] [INFO] Using worker: sync
+[2020-03-14 11:16:55 -0600] [1061] [INFO] Booting worker with pid: 1061
+Not Found: /favicon.ico
+[2020-03-14 13:39:55 -0600] [1001] [CRITICAL] WORKER TIMEOUT (pid:1061)
+[2020-03-14 19:39:55 +0000] [1061] [INFO] Worker exiting (pid: 1061)
+[2020-03-14 13:39:56 -0600] [6397] [INFO] Booting worker with pid: 6397
+[2020-03-14 21:03:52 -0600] [1001] [CRITICAL] WORKER TIMEOUT (pid:6397)
+[2020-03-15 03:03:52 +0000] [6397] [INFO] Worker exiting (pid: 6397)
+[2020-03-14 21:03:53 -0600] [14122] [INFO] Booting worker with pid: 14122
+[2020-03-15 13:11:49 -0600] [1001] [CRITICAL] WORKER TIMEOUT (pid:14122)
+[2020-03-15 19:11:49 +0000] [14122] [INFO] Worker exiting (pid: 14122)
+[2020-03-15 13:11:50 -0600] [19711] [INFO] Booting worker with pid: 19711
+[2020-03-15 15:26:17 -0600] [1001] [INFO] Handling signal: term
+[2020-03-15 21:26:17 +0000] [19711] [INFO] Worker exiting (pid: 19711)
+[2020-03-15 15:26:17 -0600] [1001] [INFO] Shutting down: Master
+[2020-03-15 15:46:02 -0600] [2923] [INFO] Starting gunicorn 20.0.4
+[2020-03-15 15:46:02 -0600] [2923] [INFO] Listening at: http://127.0.0.1:8002 (2923)
+[2020-03-15 15:46:02 -0600] [2923] [INFO] Using worker: sync
+[2020-03-15 15:46:02 -0600] [2928] [INFO] Booting worker with pid: 2928
+[2020-03-15 16:04:47 -0600] [2923] [INFO] Handling signal: term
+[2020-03-15 22:04:47 +0000] [2928] [INFO] Worker exiting (pid: 2928)
+[2020-03-15 16:04:47 -0600] [2923] [INFO] Shutting down: Master
+[2020-03-14 17:01:04 -0600] [967] [INFO] Starting gunicorn 20.0.4
+[2020-03-14 17:01:04 -0600] [967] [INFO] Listening at: http://127.0.0.1:8002 (967)
+[2020-03-14 17:01:04 -0600] [967] [INFO] Using worker: sync
+[2020-03-14 17:01:05 -0600] [1059] [INFO] Booting worker with pid: 1059
+[2020-03-15 16:05:17 -0600] [967] [CRITICAL] WORKER TIMEOUT (pid:1059)
+[2020-03-15 22:05:17 +0000] [1059] [INFO] Worker exiting (pid: 1059)
+[2020-03-15 16:05:17 -0600] [1898] [INFO] Booting worker with pid: 1898
+[2020-03-16 07:33:57 -0600] [980] [INFO] Starting gunicorn 20.0.4
+[2020-03-16 07:33:57 -0600] [980] [INFO] Listening at: http://127.0.0.1:8002 (980)
+[2020-03-16 07:33:57 -0600] [980] [INFO] Using worker: sync
+[2020-03-16 07:33:57 -0600] [1061] [INFO] Booting worker with pid: 1061
+Not Found: /favicon.ico

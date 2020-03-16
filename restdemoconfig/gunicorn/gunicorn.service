@@ -1,0 +1,13 @@
+[Unit]
+Description=gunicorn daemon
+#After=network.target
+
+[Service]
+Type=simple
+User=monicarhvm
+#WorkingDirectory=/home/monicarhvm/pythonprojects/RestDemo
+#ExecStart=/home/monicarhvm/pythonprojects/envs/restdemo/bin/gunicorn --workers 3 --bind unix:/home/monicarhvm/pythonprojects/RestDemo/RestDemo.sock RestDemo.wsgi:application
+ExecStart=/home/monicarhvm/pythonprojects/RestDemo/gunicorn_start.sh
+
+[Install]
+WantedBy=multi-user.target

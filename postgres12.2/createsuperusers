@@ -1,0 +1,42 @@
+[monicarhvm@rhel77 bin]$ source activate
+(restdemo) [monicarhvm@rhel77 bin]$ cd ../..
+(restdemo) [monicarhvm@rhel77 envs]$ pwd
+/home/monicarhvm/pythonprojects/envs
+(restdemo) [monicarhvm@rhel77 envs]$ cd ..
+(restdemo) [monicarhvm@rhel77 pythonprojects]$ ll
+total 0
+drwxrwxr-x. 3 monicarhvm monicarhvm  22 Mar  9 15:18 envs
+drwxrwxr-x. 6 monicarhvm monicarhvm 149 Mar  2 18:30 RestDemo
+(restdemo) [monicarhvm@rhel77 pythonprojects]$ cd RestDemo/
+(restdemo) [monicarhvm@rhel77 RestDemo]$ ll
+total 8
+drwxrwxr-x. 3 monicarhvm monicarhvm  94 Mar  2 18:30 features
+-rwxrwxrwx. 1 monicarhvm monicarhvm 649 Mar  2 18:30 manage.py
+-rw-rw-r--. 1 monicarhvm monicarhvm 219 Mar  2 18:30 requirements.txt
+drwxrwxr-x. 3 monicarhvm monicarhvm  93 Mar  2 18:30 RestDemo
+drwxrwxr-x. 6 monicarhvm monicarhvm 197 Mar  2 18:31 snippets
+(restdemo) [monicarhvm@rhel77 RestDemo]$ python manage.py createsuperuser
+Username (leave blank to use 'monicarhvm'): app_user1
+Email address: app_user1@gmail.com
+Password: 
+Password (again): 
+The password is too similar to the username.
+Bypass password validation and create user anyway? [y/N]: y
+Superuser created successfully.
+(restdemo) [monicarhvm@rhel77 RestDemo]$ python manage.py createsuperuser
+Username (leave blank to use 'monicarhvm'): app_user2 
+Email address: app_user2@gmail.com
+Password: 
+Password (again): 
+The password is too similar to the username.
+Bypass password validation and create user anyway? [y/N]: y
+Superuser created successfully.
+(restdemo) [monicarhvm@rhel77 RestDemo]$ python manage.py createsuperuser
+Username (leave blank to use 'monicarhvm'): reporting_user1
+Email address: reporting_user1@gmail.com
+Password: 
+Password (again): 
+The password is too similar to the username.
+Bypass password validation and create user anyway? [y/N]: y
+Superuser created successfully.
+
