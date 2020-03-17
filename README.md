@@ -12,7 +12,7 @@ highlighted,
 owner_id
 
 
-RestDemo has one restful resource "Snippet". Snippets can be created, updated, deleted, listed. Unauthenticated users can only read snippets. Any authenticated user can read any snippet. But an authenticated user can only update and delete his own snippets. Snippets are saved in the snippets table in the restdemo schema. RestDemo relies on a postgres database. Path to list snippets is http://localhost:8002/snippets Path to list snippet with id = 1 is http://localhost:8002/snippets/1.  The port number can be dynamically set in the supervisor configuration file.
+RestDemo has one restful resource "Snippet". Snippets can be created, updated, deleted, listed. Unauthenticated users can only read snippets. Any authenticated user can read any snippet. But an authenticated user can only update and delete his own snippets. Snippets are saved in the snippets table in the restdemo schema. RestDemo relies on a postgres database. Path to list snippets is http://www.restdemo.com:8002/snippets Path to list snippet with id = 1 is http://www.restdemo.com:8002/snippets/1.  The port number can be dynamically set in the supervisor configuration file.  The allowed hosts are set in settings.py for the ALLOWED_HOSTS property.
 
 
 Steps to build the project:
