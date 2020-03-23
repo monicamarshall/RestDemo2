@@ -1,0 +1,20 @@
+(restdemo) C:\data\pythonworkspace2\RestDemo2\RestDemo>python manage.py test --settings=RestDemo.settings --keepdb
+Using existing test database for alias 'default'...
+System check identified no issues (0 silenced).
+test_create_Snippet
+.test_delete_Snippet, self.id = 150
+.test_get_Snippet, self.id = 152
+.test_update_patch_Snippet, self.id = 154
+test_update_patch_Snippet url = /snippets/154/
+.test_update_put_Snippet, self.id = 156
+test_update_put_Snippet url = /snippets/156/
+.test_list_Snippet
+.test_list_Snippet with force_authenticate
+.
+----------------------------------------------------------------------
+Ran 7 tests in 0.567s
+
+OK
+Preserving test database for alias 'default'...
+
+(restdemo) C:\data\pythonworkspace2\RestDemo2\RestDemo>

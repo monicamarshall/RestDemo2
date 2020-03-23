@@ -1,0 +1,44 @@
+(restdemo) C:\data\pythonworkspace2\RestDemo2\RestDemo\features>behave
+Feature: Test CRUD methods in Snippets REST API testing framework # snippets_api.feature:1
+
+  Background:   # snippets_api.feature:3
+
+  Scenario: POST/CREATE snippet example                  # snippets_api.feature:6
+    Given I set snippets REST API url                    # steps/snippets_api.py:75
+    Given I set POST snippet api endpoint                # steps/snippets_api.py:15
+    When I set auth_header param username as "app_user1" # steps/snippets_api.py:20
+    And I set auth_header param password as "app_user1"  # steps/snippets_api.py:25
+    And I set request Body                               # steps/snippets_api.py:31
+    And I send a POST HTTP request                       # steps/snippets_api.py:41
+    Then I receive valid HTTP response code 201 for POST # steps/snippets_api.py:64
+    And Response BODY POST is non-empty                  # steps/snippets_api.py:69
+
+  Scenario: GET snippet example                                                      # snippets_api.feature:15
+    Given I set snippets REST API url                                                # steps/snippets_api.py:75
+    Given I set GET snippet api endpoint with id of snippet created in POST scenario # steps/snippets_api.py:81
+    When I send GET HTTP request                                                     # steps/snippets_api.py:89
+    Then I receive valid HTTP response code 200 for "GET"                            # steps/snippets_api.py:101
+    And Response BODY "GET" is non-empty                                             # steps/snippets_api.py:106
+
+  Scenario: PUT/UPDATE snippet example with id of snippet created in POST scenario   # snippets_api.feature:21
+    Given I set snippets REST API url                                                # steps/snippets_api.py:75
+    Given I set PUT snippet api endpoint with id of snippet created in POST scenario # steps/snippets_api.py:115
+    When I set request Body for PUT                                                  # steps/snippets_api.py:123
+    And I send a PUT HTTP request with the same credentials as in POST scenario      # steps/snippets_api.py:130
+    Then I receive valid HTTP response code 200 for PUT                              # steps/snippets_api.py:141
+    And Response BODY PUT is non-empty                                               # steps/snippets_api.py:146
+
+  Scenario: PUT/UPDATE snippet example with unauthorized user app_user2/app_user2                                     # snippets_api.feature:28
+    Given I set snippets REST API url                                                                                 # steps/snippets_api.py:75
+    When I send a PUT HTTP request with snippet id created in POST scenario for unauthorized user app_user2/app_user2 # steps/snippets_api.py:155
+    Then I receive valid error message PUT for unauthorized user                                                      # steps/snippets_api.py:165
+
+  Scenario: DELETE snippet example with id of snippet created in POST scenario  # snippets_api.feature:32
+    Given I set snippets REST API url                                           # steps/snippets_api.py:75
+    When I send a DELETE HTTP request with snippet id created in POST scenario  # steps/snippets_api.py:176
+    Then I receive valid http code 204 No Content                               # steps/snippets_api.py:187
+
+1 feature passed, 0 failed, 0 skipped
+5 scenarios passed, 0 failed, 0 skipped
+25 steps passed, 0 failed, 0 skipped, 0 undefined
+Took 0m10.501s

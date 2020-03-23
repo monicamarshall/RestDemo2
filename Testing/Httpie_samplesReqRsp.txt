@@ -1,0 +1,102 @@
+http -a app_user2:app_user2 GET http://127.0.0.1:8000/snippets/7/
+
+
+Post   Create
+
+
+
+{
+    "title": "TestSnippetForCreate",
+    "code": "Snippet snippet=new Snippet()",
+    "linenos": false,
+    "language": "java",
+    "style": "friendly"
+}
+
+
+PATCH   update snippet
+
+{
+    "id": 7,
+    "title": "Snippet7UpdatedWithPUT",
+    "owner": 7
+}
+
+(resttutorialenv) C:\data\pythonprojects\RestfulTutorial\tutorial>http -a app_user2:app_user2 PATCH http://127.0.0.1:8000/snippets/7/ title="Snippet7UpdatedWithPUTRequest"
+
+HTTP/1.1 200 OK
+Allow: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
+Content-Length: 241
+Content-Type: application/json
+Date: Sat, 08 Feb 2020 15:22:44 GMT
+Server: WSGIServer/0.2 CPython/3.8.1
+Vary: Accept, Cookie
+X-Frame-Options: SAMEORIGIN
+
+{
+    "code": "bus.id=7",
+    "highlight": "http://127.0.0.1:8000/snippets/7/highlight/",
+    "id": 7,
+    "language": "python",
+    "linenos": false,
+    "owner": "app_user2",
+    "style": "friendly",
+    "title": "Snippet7UpdatedWithPUTRequest",
+    "url": "http://127.0.0.1:8000/snippets/7/"
+}
+
+
+PUT update Snippet
+SoapUI:
+
+{
+	"title": "Snippet7UpdatedWithPUTRequest", 
+	"code": "bus.id=7"
+}
+
+(resttutorialenv) C:\data\pythonprojects\RestfulTutorial\tutorial>http -a app_user2:app_user2 
+PUT http://127.0.0.1:8000/snippets/7/ title="Snippet7UpdatedWithPUTRequest", code="bus.id=7"
+
+
+HTTP/1.1 200 OK
+Allow: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
+Content-Length: 242
+Content-Type: application/json
+Date: Sat, 08 Feb 2020 15:28:40 GMT
+Server: WSGIServer/0.2 CPython/3.8.1
+Vary: Accept, Cookie
+X-Frame-Options: SAMEORIGIN
+
+{
+    "code": "bus.id=7",
+    "highlight": "http://127.0.0.1:8000/snippets/7/highlight/",
+    "id": 7,
+    "language": "python",
+    "linenos": false,
+    "owner": "app_user2",
+    "style": "friendly",
+    "title": "Snippet7UpdatedWithPUTRequest,",
+    "url": "http://127.0.0.1:8000/snippets/7/"
+}
+
+
+PUT   update snippet BadRequest  400
+
+(resttutorialenv) C:\data\pythonprojects\RestfulTutorial\tutorial>http -a app_user2:app_user2 
+PUT http://127.0.0.1:8000/snippets/7/ title="Snippet7UpdatedWithPUTRequest"
+
+
+HTTP/1.1 400 Bad Request
+Allow: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
+Content-Length: 36
+Content-Type: application/json
+Date: Sat, 08 Feb 2020 15:28:17 GMT
+Server: WSGIServer/0.2 CPython/3.8.1
+Vary: Accept, Cookie
+X-Frame-Options: SAMEORIGIN
+
+{
+    "code": [
+        "This field is required."
+    ]
+}
