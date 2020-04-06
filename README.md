@@ -35,3 +35,36 @@ Supervisor is a graphical tool that allows to start/stop/refresh the RestDemo ap
 9. To run the BDD test first change directory to the "features" directory and then run the command behave.  If you want to see print statements to appear on the console run the "behave" command with the --no-capture option, like this "behave --no-capture".  The command and output of the behavior tests are captured in the 'BDD_CommandAndOutput.txt' document.
 10. To run SoapUI snippets test scenario, install latest version of SoapUI, import the project, run the test steps.
 11. There is an option to run HTTPIE tests on the command line.  HTTPIE requires the tool to be installed.  HTTPIE is a much richer tool than the CURL command line utility with colorful visualization of Restful HTTP invocations and responses.  Some sample commands to test the RestDemo restful API are captured in the 'Httpie_samplesReqRsp' document.
+12. The MQ app makes MQ services availabl.  MQ services include Sending to a Queue, Sending to a Topic, Receiving from a Queue, Receiving from a Topic.  
+
+13.  Install the MQ broker by extracting the zip file or the tar ball downloaded from the ActiveMQ site for windows or Linux. Open the mq console at:  http://127.0.0.1:8161/admin/, enter the default admin credentials:  admin/admin and create one topic called restdemo_topic and one queue called restdemo_queue.  These are administered objects that must be created before subscribing and sending messages to either one.
+
+14. Install stomp.py in the restdemo virtual environment with the command 'pip install stomp.py'.
+
+15. Make sure the Stomp connector is configured in the ActiveMQ config file.  Instructions for installing and configuring MQ are in the MQ folder.
+
+16. Run the tests in the mq/test folder with the command '(restdemo) C:\data\pythonworkspace2\RestDemo2\RestDemo>python manage.py test --settings=RestDemo.settings --keepdb.  This is the test setup:  2 receivers are setup for restdemo_queue.  2 receivers are setup for restdemo_topic.  The queue sender sends one message to the restdemo_queue.  The topic sender sends 1 message to the restdemo_topic.  Only one of the 2 queue receivers receive the message.  Both topic receivers receive a copy of the message.  
+This is the output of the tests:
+
+Using existing test database for alias 'default'...
+System check identified no issues (0 silenced).
+test_subscribe_send_Queue()
+received a message on queue"This is a message sent to restdemo_queue in test case"
+0
+1
+.disconnected
+disconnected
+test_subscribe_send_Topic()
+received a message on topic "This is a message sent to restdemo_topic from test case"
+received a message on topic "This is a message sent to restdemo_topic from test case"
+0
+0
+1
+1
+.disconnected
+disconnected
+
+OK
+Preserving test database for alias 'default'...
+
+17.  Access the mq web application at:  http://localhost:8000/mq/.  At this link an overview of existing mq channels are listed.  restdemo_queue and restdemo_topic are listed.  Select one of the channels and send a text message to it. http://localhost:8000/mq/1/ this restful url will access all messages posted at mq channel with id 1.  At this page you have the option of sending a text message to the channel by entering the message in the input field and clicking on the send button.  To view all messages sent return to the mq link and view all messages enqueued.
