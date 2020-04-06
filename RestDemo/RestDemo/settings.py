@@ -59,6 +59,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'snippets.apps.SnippetsConfig',
+    'polls.apps.PollsConfig',
+    'mq.apps.MqConfig',
 ]
 INSTALLED_APPS += ['behave_django']
 

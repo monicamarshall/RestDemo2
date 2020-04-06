@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>MQChannel Index page</title>
+        <link rel = "stylesheet"
+    		type = "text/css"
+   			href = "/static/mq/base.css" />
+  </head>
+  <body>
+  
+  {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+
+  
+  
+  	<table border="1">
+	{% if mqchannel_list %}
+		
+	    <ul>
+	    <tr>
+	      <th> mqchannel id </th>
+	      <th> mqchannel name </th>
+	      <th> mqchannel type</th>
+	    </tr>
+	    {% for mqchannel in mqchannel_list %}
+	    <tr>
+			<td>
+	        	{{ mqchannel.id }}
+	        </td>
+	        <td>
+	        	<a href="{% url 'mq:detail' mqchannel.id %}">{{ mqchannel.mqchannel_name }}</a>
+	        </td>
+	        <td>
+	        	{{ mqchannel.mqchannel_type }}
+	        </td>
+
+	     </tr>
+	    {% endfor %}
+	    </ul>
+	    
+	</table>
+	{% else %}
+	    <p>No MQ Channels are available.</p>
+	{% endif %}
+
+ </body>
+</html>

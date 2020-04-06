@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>MQ Channel Messages page</title>
+    <link rel = "stylesheet"
+    		type = "text/css"
+   			href = "/static/mq/base.css" />
+  </head>
+  <body>
+  <form action="{% url 'mq:send' mqchannel.id %}" method="post">
+    {% csrf_token %}
+    <input type="text" name="message" id="{{ mqchannel.id }}" value="Default message text">
+    <input type="submit" value="Send">
+    
+    <table border="2">
+      <tr>
+         <th border="1">Messages posted in mqchannel <a href="{% url 'mq:index'  %}">{{ mqchannel.mqchannel_name|upper }}</a>
+            
+   
+		</th>
+      </tr>
+    <ul>
+
+	{% for message in mqchannel.mqmessage_set.all %}
+	<tr>
+		<td>
+			<li>{{ message.message_text|upper }}</li>
+		</td>
+	</tr>	    
+    {% endfor %}
+	</ul>
+	</table> 
+	</form>
+  </body>
+</html>
