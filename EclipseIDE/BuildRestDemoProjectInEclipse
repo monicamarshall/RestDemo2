@@ -1,0 +1,14 @@
+In Eclipse switch to the Git Repositories view:  Top Menu, select Window --> View --> GitRepositories
+select Clone a Git Repository and add the clone to this view.  It's the middle button to the left.
+In the Clone Git Repository dialog enter the URI copied from the Github project RestDemo 2:  https://github.com/monicamarshall/RestDemo2.git
+The other fields will fill in automatically.
+Click Next on the next 2 dialogs.
+In the next Dialog select the local destination where you want the clone to be saved on your local disk.  I selected /home/monica/pythonprojects.
+Click on Finish.
+After that select the project that appears in the git repositories view, right mouse click on it, then select import.
+Select a location on your disk to import the github project RestDemo in the Eclipse IDE.
+Right mouse click on the project and configure the interpreter to use Python located in the restdemo virtual environment.
+Instructions on how to create the restdemo environment are located in the InstallPythonConfigureVirtualEnvironment text file.
+Name your interpreter restdemo to easily find it later.
+
+You are ready to run the RestDemo project. 
