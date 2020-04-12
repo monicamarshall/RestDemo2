@@ -1,3 +1,7 @@
+https://www.youtube.com/watch?v=uOpug3ie_h0
+
+watch this video for step details.
+
 In Eclipse switch to the Git Repositories view:  Top Menu, select Window --> View --> GitRepositories
 select Clone a Git Repository and add the clone to this view.  It's the middle button to the left.
 In the Clone Git Repository dialog enter the URI copied from the Github project RestDemo 2:  https://github.com/monicamarshall/RestDemo2.git
