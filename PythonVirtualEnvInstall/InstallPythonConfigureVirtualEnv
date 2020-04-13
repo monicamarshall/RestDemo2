@@ -1,0 +1,134 @@
+https://phoenixnap.com/kb/how-to-install-python-3-centos-7
+
+https://intellipaat.com/community/31672/how-to-use-requirements-txt-to-install-all-dependencies-in-a-python-project
+
+
+
+How to Install Latest Version Of Python 3 on CentOS 7
+Posted March 12, 2019  centos pip python
+
+    HomeDevOps and DevelopmentHow to Install Latest Version Of Python 3 on CentOS 7
+
+Introduction
+
+Python is a popular, stable, and well-performing programming language. Many different Linux distributions use it, including CentOS 7.
+
+CentOS 7 uses Python 2.7.5, but as Python has updated to 3.7.2. , this can create challenges. If the default version of Python is updated, it can break base system components like the yum package manager.
+
+This guide will walk you through how to install the most recent version of Python 3 on CentOS 7. We offer two options for installation on CentOS, via the SCL utility or from the source code.
+
+how to install python 3 on centos
+
+Note: Even though the latest version of Python is 3.7.2, this guide shows you how to install an earlier version for simplicity. For an advanced guide to installing Python 3.7.2 from source code, skip ahead to section 3.
+
+Prerequisites
+
+    Access to a user account with sudo privileges
+    A CentOS 7 system, with the extras repository enabled
+    The yum package manager, included by default
+    A terminal window/command line (Ctrl-Alt-F2)
+
+Preparing CentOS
+Step 1: Update the package manager
+
+Before you begin, refresh the package listings. This helps ensure that yum is up to date.
+
+Launch a terminal window, and enter:
+
+sudo yum update
+
+Allow the process to complete.
+Step 2: Install the SCL utility (required for Option 1 installation)
+
+The SCL, or Software Collections, is an open-source project. Its goal is to let you install and run multiple versions of the same software on the same system. SCL is an excellent workaround for CentOS 7, where we don’t want to interfere with the system version of Python.
+
+Install SCL with:
+
+sudo yum install centos-release-scl
+
+install scl
+
+Note: For more information on SCL, or to browse their software collection, please visit the developers’ website. Also, note that the latest version of Python available through the SCL project is 3.6. It can take time for newer software releases to populate through third-party repositories.
+Option 1: Installing Python 3 With SCL
+Step 1: Install Python 3.6
+
+To install Python 3.6, enter the following into a terminal window:
+
+sudo yum install rh-python36
+
+Note: If you prefer, you can install previous releases as well. SCL maintains Python 3.6, 3.5, 3.4, 3.3, and 2.7. Please see the Software Collections page for more information.
+Step 2: Verify Version
+
+1. In a terminal, enter the following to verify and check your version of Python:
+
+python ––version
+
+The system should respond by displaying
+
+Python 2.7.5
+
+verify python version
+
+The output shows that the installation hasn’t changed the base Python that CentOS relies on.
+
+2. To verify the installation of Python 3.6, first launch Python in an SCL shell:
+
+scl enable rh-python36 bash
+
+This command places you in a shell where you can use your newer Python version.
+
+3. Enter the following:
+
+python ––version
+
+It should now display:
+
+Python 3.6.x
+
+verify python version in scl shell
+
+If you need to exit the shell, type exit and hit enter and drop to a standard command prompt.
+Step 3: Install Development Tools
+
+Developing in Python requires another software package, called Development Tools.
+
+Install this package by entering:
+
+sudo yum groupinstall “Development Tools”
+
+Allow the process to complete.
+
+install development tools
+Step 4: Create a Virtual Environment
+
+1. Start by creating a directory to store your new project:
+
+mkdir ~/python_project
+
+cd ~/python_project
+
+You can rename the directory to anything you prefer.
+
+2. If you haven’t already, launch the SCL Python shell:
+
+scl enable rh-python36 bash
+
+3. Create a new Python virtual environment:
+
+python –m venv restdemo
+
+4. Activate the virtual environment:
+
+source restdemo/bin/activate
+
+The command prompt should change to the name of the project you just created. You’re now working in Python 3.6.
+
+create virtual envirnoment for RestDemo project
+
+Install all the artifacts needed by the RestDemo project by loading requirements.txt
+
+cd to RestDemo2/RestDemo where requirements.txt is located.
+
+Run pip install -r requirements.txt
+
+

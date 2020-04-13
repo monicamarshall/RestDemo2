@@ -1,0 +1,89 @@
+ Install the latest Eclipse on Linux
+Gobinath Loganathan Gobinath Loganathan a year ago
+This article shows you the way to install the latest version of Eclipse on Linux. There are other ways to install Eclipse using scripts to automate the installation. However, I prefer the manual installation method explained in this article so that you know where your files go. Later if you want to remove the Eclipse, it is just two commands as explained at the end of the article.
+
+If you do not have Java in your system, follow this link and install the Java 8 first.  Install OpenJDK 8.
+
+
+Step 1:
+Download the desired version of Eclipse from the official site:
+
+    DOWNLOAD 
+
+
+
+Step 2:
+Open the Terminal (Ctrl + Alt + T) and enter the following command to change the directory.
+
+cd /opt
+
+Copy
+
+Step 3:
+Enter the command given below to extract the Eclipse from ~/Downloads directory. If your downloaded file is in any other directory, replace the last parameter by the actual file path.
+
+sudo tar -xvzf ~/Downloads/eclipse-jee-2019-12-R-linux-gtk-x86_64.tar.gz
+
+Copy
+
+Step 4:
+Open another Terminal (Ctrl + Alt + T) and enter the following command to create a shortcut file for eclipse.
+
+gedit eclipse.desktop
+
+Copy
+
+Step 5:
+In the opened gedit, copy and paste the following text.
+
+[Desktop Entry]
+Name=Eclipse
+Type=Application
+Exec=/opt/eclipse/eclipse
+Terminal=false
+Icon=/opt/eclipse/icon.xpm
+Comment=Integrated Development Environment
+NoDisplay=false
+Categories=Development;IDE;
+Name[en]=Eclipse
+Name[en_US]=Eclipse
+
+Copy
+
+
+Step 6:
+Save and close the gedit.
+
+Step 7:
+Enter the following command in the terminal to install the shortcut.
+
+sudo desktop-file-install eclipse.desktop
+
+Copy
+
+Now search for Eclipse in the dashboard and open it.
+
+
+Upgrade Eclipse
+If you have already installed Eclipse using the above method and would like to upgrade the Eclipse to the latest version, just remove the Eclipse from /opt director and follow Steps 1 to 3 from the installation process.
+
+sudo rm -rf /opt/eclipse
+
+Copy
+
+
+Remove Eclipse
+Removing the Eclipse installed as described in this article is just two lines of commands.
+
+
+Step 1:
+First, remove the menu entry you created in Step 7.
+
+sudo rm /usr/share/applications/eclipse.desktop
+
+Copy
+
+Step 2:
+Delete the /opt/eclipse folder.
+
+sudo rm -rf /opt/eclipse
