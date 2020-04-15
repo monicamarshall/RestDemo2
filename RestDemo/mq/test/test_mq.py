@@ -1,7 +1,5 @@
-from django.db import models
 import time
-import sys
-from stomp import Connection, ConnectionListener, PrintingListener
+from stomp import Connection
 from django.test import TestCase
 
 class TestMQ(TestCase):
@@ -14,7 +12,7 @@ class TestMQ(TestCase):
     def tearDown(self):
         pass
     
-    def connect_and_subscribe(conn):
+    def connect_and_subscribe(self, conn):
         conn.connect('admin', 'admin', wait=True)
         conn.subscribe(destination='/queue/restdemo_queue', id=1, ack='auto')
         
@@ -35,7 +33,7 @@ class TestMQ(TestCase):
                     print(x)
                     time.sleep(1)
         
-            def on_disconnected():
+            def on_disconnected(self):
                 print('disconnected')
                 #connect_and_subscribe(self.conn)  
  
@@ -82,7 +80,7 @@ class TestMQ(TestCase):
                     time.sleep(1)
                     
         
-            def on_disconnected():
+            def on_disconnected(self):
                 print('disconnected')
                 #connect_and_subscribe(self.conn)  
  

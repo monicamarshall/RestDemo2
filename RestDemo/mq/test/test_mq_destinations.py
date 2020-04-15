@@ -1,6 +1,4 @@
-from django.db import models
 import time
-import sys
 from stomp import Connection, ConnectionListener, PrintingListener
 
 class TestMQDestinations(object):
