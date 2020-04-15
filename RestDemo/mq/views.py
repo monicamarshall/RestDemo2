@@ -1,10 +1,8 @@
-from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, render
 from .models import MQChannel
-from .models import MQMessage
-import time
+
 from mq_events.send_receive import SendReceiveAPI
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponseRedirect
 from django.urls import reverse
 
 #def mqchannels(request):
@@ -28,7 +26,6 @@ def send(request, id):
     print("channel_id = " + str(id))
     mqchannel = get_object_or_404(MQChannel, pk=id)
     SendReceiveAPI().send_mqchannel(mqchannel, input_message)
-    mqchannel_list = MQChannel.objects.order_by('created')
-    context = {'mqchannel_list': mqchannel_list}
-    return HttpResponseRedirect(reverse('mq:index'))
- 
+    #mqchannel_list = MQChannel.objects.order_by('created')
+    #context = {'mqchannel_list': mqchannel_list}
+    return HttpResponseRedirect(reverse('mq:index')) 
