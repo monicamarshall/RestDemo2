@@ -1,7 +1,5 @@
 from django.db import models
-import time
-import sys
-import stomp
+
 
 class MQChannel(models.Model):
     MQCHANNEL_TYPE = (
