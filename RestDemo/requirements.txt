@@ -21,7 +21,7 @@ pip==20.0.2
 pluggy==0.13.1    
 psycopg2-binary==2.7.7     
 py==1.8.1     
-Pygments==2.3.1     
+Pygments==2.7.4     
 pyparsing==2.4.6     
 pytest==5.4.1     
 pytest-bdd==3.2.1     
