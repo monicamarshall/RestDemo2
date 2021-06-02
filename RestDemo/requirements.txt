@@ -32,7 +32,7 @@ setuptools==45.2.0
 six==1.14.0    
 sqlparse==0.3.0     
 stomp.py==6.0.0     
-urllib3==1.25.8    
+urllib3==1.26.5    
 wcwidth==0.1.8     
 wheel==0.34.2    
 whitenoise==4.1.2     
