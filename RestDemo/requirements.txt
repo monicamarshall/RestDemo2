@@ -17,7 +17,7 @@ more-itertools==8.2.0
 packaging==20.3      
 parse==1.14.0    
 parse-type==0.5.2     
-pip==20.0.2    
+pip==21.1    
 pluggy==0.13.1    
 psycopg2-binary==2.7.7     
 py==1.8.1     
